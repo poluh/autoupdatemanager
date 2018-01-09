@@ -13,11 +13,11 @@ import static java.lang.Thread.sleep;
 
 public class ConfigConnect {
 
-    private final static String LOGIN = "";
-    private final static String PASSWORD = "";
-    private final static String HOST = "files..com";
+    private final static String LOGIN = "userupdate";
+    private final static String PASSWORD = "ireadnews";
+    private final static String HOST = "files.000webhost.com";
     private final static int PORT = 21;
-    private final static String DIR = "/tmp/updates";
+    private final static String DIR = "public_html/updates";
     private final static String PATH_TO_CONFIG = "config.txt";
 
     private static int getVersion() {
@@ -34,8 +34,7 @@ public class ConfigConnect {
         GUI app = new GUI();
         app.setVisible(true);
         WorkFile.workFile();
-        ConnectServer.connect(LOGIN, PASSWORD, HOST, PORT, DIR, getVersion());
-        WorkFile.installNewApp();
+
         label.setText(label.getText() + "Success!\n");
         try {
             sleep(2000);
